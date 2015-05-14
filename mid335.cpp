@@ -108,12 +108,10 @@ void unit_test(double tolerance){
 
 		cout<<j+1<<"     "<<i <<"       " <<freqq <<"      "<<difference;
 		if(difference<tolerance){
-		cout<<"  good"<<endl;
-		}
-
-		else{
-		cout<<"  bad"<<endl;
-		track++;
+			cout<<"  good"<<endl;
+		}else{
+			cout<<"  bad"<<endl;
+			track++;
 		}
 		k++;
 	}
