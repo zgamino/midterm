@@ -1,7 +1,7 @@
 //CMPS 335
 //mid335.cpp
 //By: Zenaida Gamino
-//
+//Midterm cs335.
 //
 #include <iostream>
 #include <iomanip>
@@ -46,8 +46,7 @@ int main(int argc, char *argv[])
 		cout << "Usage: " << argv[0] << " <NOTE>  <OCTAVE_DELTA> <Tolerance>" << endl;
 		return 0;
 	}
-	
-	//note = (note_t)(toupper(argv[1][0]) - 64);
+
 	switch(toupper(argv[1][0])) {
 		case 'A': note = A; break;
 		case 'B': note = B; break;
@@ -69,9 +68,7 @@ int main(int argc, char *argv[])
 		cout << "Invalid note!" << endl;
 		return 1;
 	}
-//	octave_delta = atoi(argv[2]);
-//	cout << HALF_STEPS_PER_OCTAVE << endl;
-//	cout << freq(note, octave_delta) << endl;
+
 	return 0;
 }
 
@@ -108,8 +105,6 @@ void unit_test(double tolerance){
 		octave_delta = octave[i];
 		freqq=freq(note, octave_delta);
 		difference=abs(freqq - frequencies[k]);
-		
-		//cout << HALF_STEPS_PER_OCTAVE 
 
 		cout<<j+1<<"     "<<i <<"       " <<freqq <<"      "<<difference;
 		if(difference<tolerance){
